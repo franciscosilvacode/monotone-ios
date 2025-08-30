@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "athlete": "Francisco",
+    "race_date": "2026-01-15",
+    "goal": "sub-4:00",
+    "target_pace_km": "5:41/km",
+    "training_window_local": "19:00–21:00",
+    "environment": "Doha evenings; high heat & humidity Aug–Oct",
+    "version": "Evening v2.1 (heat-adjusted)"
+  },
+  "global_guidelines": {
+    "effort_based_outdoors": {
+      "description": "Train by effort (HR/RPE). Use treadmill/AC for quality when nights are hot/humid.",
+      "easy_hr_cap_bpm": 155,
+      "notes": [
+        "If HR >155 bpm for >60 s in easy runs, use run–walk until it drops.",
+        "Quality sessions indoors if WBGT/heat index is high."
+      ]
+    },
+    "heat_index_switch": [
+      {"condition": "HI≥40 or T≥33°C & RH≥60%", "action": "Move quality to treadmill; convert long run to time-on-feet + run–walk"},
+      {"condition": "HI 29–31°C", "action": "Keep work ≤40 min, extend recoveries, expect +8–12% slower"},
+      {"condition": "HI≤28°C", "action": "Resume normal targets"}
+    ],
+    "cooling_fueling": {
+      "pre": "15–20 min AC; ice towel/vest optional; 300–400 ml ice slushy",
+      "during": "0.4–0.8 L/h with 300–600 mg sodium/h; sip every 10–15 min",
+      "post": "10–15 min cool shower/ice bath; rehydrate 150% of losses within 2–4 h"
+    }
+  },
+  "weeks": [
+    {
+      "number": 1,
+      "date_range": "2025-08-31 → 2025-09-06",
+      "type": "detailed",
+      "days": [
+        {"day":"Mon","type":"rest","extras":["mobility 20 min","light core"]},
+        {"day":"Tue","type":"easy","format":"run–walk 2’/1’","duration_min":40,"hr_cap_bpm":150,"strides":"4×100 m if HR<145"},
+        {"day":"Wed","type":"cross-train","env":"AC","duration_min":45,"zone":"Z2","extras":["glute/core"]},
+        {"day":"Thu","type":"treadmill_tempo","total_min":"35–40","blocks":[{"warmup_min":10},{"repeats":3,"work_min":6,"intensity":"comfortably hard","hr_max_bpm":160,"recover_min":3},{"cooldown_min":10}]},
+        {"day":"Fri","type":"recovery_jog","duration_min":"25–30","env":"outdoor if breezy; else treadmill"},
+        {"day":"Sat","type":"treadmill_endurance","duration_min":60,"zone":"Z2","grade_percent":"1–2%","drink_ml":"400–600"},
+        {"day":"Sun","type":"long_run","env":"outdoor PM","duration_min":"70–80","format":"run–walk 3’/1’","hr_cap_bpm":155}
+      ]
+    },
+    {
+      "number": 2,
+      "date_range": "2025-09-07 → 2025-09-13",
+      "type": "detailed",
+      "days": [
+        {"day":"Mon","type":"rest","extras":["mobility"]},
+        {"day":"Tue","type":"easy","duration_min":45,"format":"run–walk 3’/1’","hr_cap_bpm":150},
+        {"day":"Wed","type":"cross-train","env":"AC","duration_min":50,"zone":"Z2"},
+        {"day":"Thu","type":"treadmill_intervals","total_min":"50–55","blocks":[{"warmup_min":15},{"repeats":6,"work_min":3,"intensity":"~10K effort","hr_bpm":"158–165","recover_min":2},{"cooldown_min":10}]},
+        {"day":"Fri","type":"recovery_jog","duration_min":30},
+        {"day":"Sat","type":"treadmill_endurance","duration_min":70,"zone":"Z2","finish":"last 10’ optional Z3 if fresh"},
+        {"day":"Sun","type":"long_run","duration_min":"85–90","format":"run–walk 4’/1’","hr_cap_bpm":155}
+      ]
+    },
+    {
+      "number": 3,
+      "date_range": "2025-09-14 → 2025-09-20",
+      "type": "detailed",
+      "days": [
+        {"day":"Mon","type":"rest"},
+        {"day":"Tue","type":"easy","duration_min":50,"format":"continuous (run–walk only if HR>150)"},
+        {"day":"Wed","type":"cross-train","env":"AC","duration_min":"45–50"},
+        {"day":"Thu","type":"treadmill_progression","total_min":"55–60","blocks":[{"warmup_min":15},{"steady_min":20,"hr_bpm":"150–158"},{"mp_feel_min":10,"pace_km":"5:35–5:45","hr_max_bpm":162},{"cooldown_min":10}]},
+        {"day":"Fri","type":"recovery_jog","duration_min":30,"extras":["drills"]},
+        {"day":"Sat","type":"treadmill_uphill","duration_min":50,"zone":"Z2","grade_percent":"3–4%"},
+        {"day":"Sun","type":"long_run","duration_min":"95–100","format":"start 4’/1’; last 20’ continuous if HR≤155"}
+      ]
+    },
+    {
+      "number": 4,
+      "date_range": "2025-09-21 → 2025-09-27",
+      "type": "detailed",
+      "days": [
+        {"day":"Mon","type":"rest"},
+        {"day":"Tue","type":"easy","duration_min":45,"hr_cap_bpm":145},
+        {"day":"Wed","type":"cross-train+strength","env":"AC","cross_train_min":"40–45","strength_min":25,"focus":["single-leg","core"]},
+        {"day":"Thu","type":"treadmill_threshold","total_min":"45–50","blocks":[{"warmup_min":12},{"repeats":3,"work_min":8,"intensity":"LT feel (RPE 7/10)","hr_bpm":"160–164","recover_min":3},{"cooldown_min":8}]},
+        {"day":"Fri","type":"recovery_jog","duration_min":"25–30"},
+        {"day":"Sat","type":"off_or_swim","note":"gentle swim optional"},
+        {"day":"Sun","type":"long_run","duration_min":"80–85","format":"run–walk 3’/1’"}
+      ]
+    },
+    {
+      "number_range":[5,8],
+      "date_range":"2025-09-28 → 2025-10-25",
+      "type":"guideline",
+      "weekly_volume_km":"52–64 per week",
+      "notes":["Re-introduce controlled outdoor work when evening lows ≤30°C."],
+      "sessions":{
+        "quality_1x":[
+          {"option":"outdoor steady","session":"4–5×6’ @ upper Z3 (HR 155–160) w/ 3’ jog"},
+          {"option":"treadmill HM","session":"5×1.6 km @ ~HM effort (HR 160–165) w/ 600 m easy"}
+        ],
+        "tempo_1x":"Build to 2×15’ @ strong aerobic (HR 158–162)",
+        "long_run":"1h45 → 2h10, last 20–30’ steady if HR ≤160",
+        "easy_days":"30–55 min Z2, optional strides"
+      }
+    },
+    {
+      "number_range":[9,16],
+      "date_range":"2025-10-26 → 2025-12-21",
+      "type":"guideline",
+      "weekly_volume_km":"64–90+ per week",
+      "notes":["Evenings typically ≤28°C; progress to full race-pace work."],
+      "sessions":{
+        "rotate_2_of_3":[
+          "Intervals: 5×1.6 km @ ~10K pace (HR 165–172), 2–3’ jog",
+          "Tempo: 8–11 km continuous @ LT (HR 162–168)",
+          "Long run with MP: 26–32 km with 10–16 km @ MP (≈5:29–5:35/km) if conditions cool; else by HR ≤167"
+        ],
+        "strength":"1×/week 30–40 min (single-leg RDL, step-ups, calf raises, trunk)"
+      }
+    },
+    {
+      "number_range":[17,20],
+      "date_range":"2025-12-22 → 2026-01-15",
+      "type":"guideline",
+      "weekly_volume_km":"Taper: reduce from ~70 → 40 km",
+      "notes":["Keep intensity touches short; protect freshness."],
+      "sessions":{
+        "wk17_19":"1 short interval set (e.g., 6×400 m @ 5K feel) + one MP touch 5–8 km",
+        "race_week":"2–3 easy runs + short strides; all Zone 2; carb load 7–10 g/kg in last 48 h"
+      }
+    }
+  ]
+}
